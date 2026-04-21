@@ -1,38 +1,18 @@
-Что куда загрузить
+Сайт: Второй Медицинский Мозг
+Хостинг: Netlify
+Бэкенд: https://web-production-b0acb.up.railway.app
 
-1. Загрузить thank-you.html в корень сайта
-   URL:
-   https://ВАШ-ДОМЕН/thank-you.html
+Структура:
+- index.html          — главная страница с кнопкой оплаты
+- thanks.html         — страница после успешной оплаты
+- payment-failed.html — страница после неудачной оплаты
 
-2. Загрузить payment-failed.html в корень сайта
-   URL:
-   https://ВАШ-ДОМЕН/payment-failed.html
+Настройки в личном кабинете Т-Банка:
+SuccessURL:      https://ВАШ-ДОМЕН/thanks.html
+FailURL:         https://ВАШ-ДОМЕН/payment-failed.html
+NotificationURL: https://web-production-b0acb.up.railway.app/tbank/webhook
 
-3. Загрузить tbank-notify.php в корень сайта
-   URL:
-   https://ВАШ-ДОМЕН/tbank-notify.php
-
-4. Создать рядом папку logs
-   Если не получится создать вручную, PHP попытается создать ее сам.
-
-Что указать в Т-Банке или в Init:
-
-SuccessURL:
-https://ВАШ-ДОМЕН/thank-you.html
-
-FailURL:
-https://ВАШ-ДОМЕН/payment-failed.html
-
-NotificationURL:
-https://ВАШ-ДОМЕН/tbank-notify.php
-
-Как проверить:
-1. Откройте вручную:
-   https://ВАШ-ДОМЕН/thank-you.html
-   https://ВАШ-ДОМЕН/payment-failed.html
-
-2. После тестовой оплаты должен открыться thank-you.html
-
-3. После оплаты проверьте файл:
-   logs/tbank_notify.log
-   Если там появилась строка, значит NotificationURL работает.
+Terminal Key сейчас тестовый (DEMO) — прописан в index.html.
+При переходе на боевой терминал:
+1. Заменить TBANK_TERMINAL_KEY в index.html (строка ~1371)
+2. Обновить TBANK_PASSWORD в переменных Railway
