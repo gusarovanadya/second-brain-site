@@ -8,8 +8,8 @@
 - payment-failed.html — страница после неудачной оплаты
 
 Настройки в личном кабинете Т-Банка:
-SuccessURL:      https://ВАШ-ДОМЕН/thanks.html
-FailURL:         https://ВАШ-ДОМЕН/payment-failed.html
+SuccessURL:      https://second-brain-site.netlify.app/thanks.html
+FailURL:         https://second-brain-site.netlify.app/payment-failed.html
 NotificationURL: https://web-production-b0acb.up.railway.app/tbank/webhook
 
 Terminal Key сейчас тестовый (DEMO) — прописан в index.html.
