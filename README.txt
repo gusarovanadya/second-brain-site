@@ -12,7 +12,4 @@ SuccessURL:      https://second-brain-site.netlify.app/thanks.html
 FailURL:         https://second-brain-site.netlify.app/payment-failed.html
 NotificationURL: https://web-production-b0acb.up.railway.app/tbank/webhook
 
-Terminal Key сейчас тестовый (DEMO) — прописан в index.html.
-При переходе на боевой терминал:
-1. Заменить TBANK_TERMINAL_KEY в index.html (строка ~1371)
-2. Обновить TBANK_PASSWORD в переменных Railway
+Terminal Key — прописан в index.html.
