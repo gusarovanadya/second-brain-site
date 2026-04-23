@@ -1438,7 +1438,7 @@ async function startPayment() {
   var failUrl = window.location.origin + '/?payment=failed';
 
   try {
-    var res = await fetch('https://securepay.tinkoff.ru/v2/Init', {
+    var res = await fetch(SERVER_URL + '/tbank/init', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
