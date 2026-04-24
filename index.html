@@ -845,10 +845,10 @@ function updateCalc(){
   document.getElementById('analysisCount').textContent=a;
   document.getElementById('consultCount').textContent=c;
   const b=chkBad?2000:0,ag=chkAge?1500:0;
-  let doc=service==='analysis'?a*800+b+ag:service==='consult'?c*3500+b+ag:a*800+c*3500+b+ag;
+  let doc=service==='analysis'?a*800+b+ag:service==='consult'?c*1500+b+ag:a*800+c*1500+b+ag;
   document.getElementById('priceDoctor').textContent=doc.toLocaleString('ru')+' ₽';
   document.getElementById('priceNutri').textContent=Math.round(doc*.55).toLocaleString('ru')+' ₽';
-  document.getElementById('priceSave').textContent='Экономия: '+Math.max(0,doc-3500).toLocaleString('ru')+' ₽ в месяц';
+  document.getElementById('priceSave').textContent='Экономия: '+Math.max(0,doc-1500).toLocaleString('ru')+' ₽ в месяц';
 }
 updateCalc();
 
@@ -1372,7 +1372,7 @@ var TBANK_TERMINAL_KEY = '1653553000913';
 // ============================================================
 
 var SERVER_URL = 'https://web-production-b0acb.up.railway.app';
-var PRODUCT_PRICE = 350000; // в копейках = 3500 руб
+var PRODUCT_PRICE = 150000; // в копейках = 1500 руб
 
 var checked1 = false;
 var checked2 = false;
