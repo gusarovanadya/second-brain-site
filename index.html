@@ -1435,6 +1435,7 @@ async function startPayment() {
   btn.disabled = true;
 
   var orderId = email + '|' + Date.now();
+  var utmSource = new URLSearchParams(window.location.search).get('utm_source') || 'прямой';
   var amount = PRODUCT_PRICE;
   var successUrl = window.location.origin + '/thanks.html?email=' + encodeURIComponent(email);
   var failUrl = window.location.origin + '/?payment=failed';
@@ -1447,6 +1448,7 @@ async function startPayment() {
         TerminalKey: TBANK_TERMINAL_KEY,
         Amount: amount,
         OrderId: orderId,
+        DATA: utmSource,
         Description: 'Второй Медицинский Мозг',
         SuccessURL: successUrl,
         FailURL: failUrl,
